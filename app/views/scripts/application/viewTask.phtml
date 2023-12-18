@@ -18,10 +18,15 @@ $url = $this->baseUrl();?>
         <p class="text-gray-700"><?= $task['description'] ?></p>
         <p class="text-gray-500 mt-2">
             Author: <?= $task['author'] ?> | Status: <?= $task['status'] ?>
-        </p>
+        </p><!-- 
         <p class="text-gray-500">
             Start date: <?= $task['startDate'] ?>
-        </p>
+        </p> -->
+        <?php if (isset($task['startDate'])) : ?>
+            <p class="text-gray-500">
+            Start date: <?= $task['startDate'] ?>
+            </p>
+        <?php endif; ?>
         <?php if (isset($task['endDate'])) : ?>
             <p class="text-gray-500">
                 End date: <?= $task['endDate'] ?>

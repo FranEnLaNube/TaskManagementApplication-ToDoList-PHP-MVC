@@ -28,7 +28,11 @@ class ApplicationController extends Controller
         $name        = $_POST["name"];
         $description = $_POST["description"];
         $status      = $_POST["status"];
-
+        $startDate   = $_POST["status"] !== 'Pending' ? date('Y-m-d H:i') : null;
+        $endDate   = $_POST["status"] == 'Finished' ? date('Y-m-d H:i') : null;
+        
+        // $startDate = isset($task['startDate']) ? $task['startDate'] : null;
+        
         // Create an array to represent a task
 
         $task = [
@@ -36,8 +40,9 @@ class ApplicationController extends Controller
             'name' => $name,
             'description' => $description,
             'status' => $status,
-            'startDate' => date('Y-m-d'),
-            'endDate' => null
+            'startDate' => $startDate,
+            // 'startDate' => date('Y-m-d H:i'),
+            'endDate' => $endDate
         ];
 
         TaskModel::saveTask($task);
@@ -113,19 +118,9 @@ class ApplicationController extends Controller
                     $description = $_POST['description'];
                     $status = $_POST['status'];
 
-                    // Get start date if present
-                    $startDate = isset($task['startDate']) ? $task['startDate'] : null;
-
-                    // Check if status changed to "finished" and update finish date
-                    if ($task && $task['status'] !== $status) {
-                        if ($status === 'Finished') {
-                            $endDate = date('Y-m-d'); // Current date
-                        } else {
-                            $endDate = null;
-                        }
-                    } else {
-                        $endDate = isset($task['endDate']) ? $task['endDate'] : null;
-                    }
+                    // Set start and end dates
+                    $startDate = $task['startDate'] ?? ($status !== 'Pending' ? date('Y-m-d H:i') : null);
+                    $endDate = ($status == 'Finished') ? ($task['endDate'] ?? date('Y-m-d H:i')) : null;
 
                     // Update info in selected task
                     $updatedTaskData = [
