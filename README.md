@@ -2,7 +2,14 @@
 Welcome to TaskManagerApp, a team project developed during my Bootcamp at the IT Academy.   
 We gained hands-on experience working with a custom-made PHP framework to create an application that allows users to manage their tasks seamlessly.  
 The application supports task creation, updates, deletions, and provides a clear list of tasks with their respective statuses and timestamps.   
-#### Below are the key features and instructions for using the app:
+
+https://github.com/FranEnLaNube/TaskManagementApplication-ToDoList-PHP-MVC/assets/123636378/26bf1f11-2699-4bd4-a146-94b625e42bce
+
+## Technologies Used
+
+- **PHP:** Based, following the **Model-View-Controller** (MVC) pattern.
+- **Tailwind CSS:** Employed for style a responsive front-end design on **HTML** pages.
+- **JSON database** is used for data persistence
 
 ## Features
 
@@ -21,21 +28,12 @@ The application supports task creation, updates, deletions, and provides a clear
 
 - **Responsive Design:** The front-end, designed with the Tailwind CSS framework for HTML pages, ensures a user-friendly experience.
 
-## Demo
-https://github.com/FranEnLaNube/TaskManagementApplication-ToDoList-PHP-MVC/assets/123636378/26bf1f11-2699-4bd4-a146-94b625e42bce
+## How to Use it
 
-## How to Use
-
-1. **Clone or Download:** Copy the repository to your local machine. It's better if you place it in yout local host folder.
+1. **Clone or Download:** Copy the repository to your local machine. It's better if you place it in your local host folder.
 2. **Turn the server on:** Ussualy is XAMMP for Windows/MacOS or LAMMP in Linux, then go to "Admin"
 6. **Access the Application:** Your browser should be now open, so go to the `web` folder. If is not, open it yourself and go to `http://localhost/TaskManagerApp-ToDoList-PHP-MVC/web`.
 7. **User Interface:** Navigate the App interface to create, update, delete, and list tasks.
-
-## Technologies Used
-
-- **PHP:** Based, following the **Model-View-Controller** (MVC) pattern.
-- **Tailwind CSS:** Employed for style a responsive front-end design on **HTML** pages.
-- **JSON database** is used for data persistence
 
 ## Acknowledgements
 
@@ -44,7 +42,6 @@ This project was completed during my time at IT Academy, providing valuable expe
 ---
 ---
 ### Below you can see the readme that we were given initially:
----
 # PHP initial Project
 Main structure of php project. Folders / files:
 - **app**
